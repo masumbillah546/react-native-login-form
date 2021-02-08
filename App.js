@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, {useState}from 'react';
 import { StyleSheet, Text, View, TextInput, Button, Image,TouchableOpacity } from 'react-native';
 
 const Logo = ({ url }) => (<View style={styles.logo}>
@@ -39,8 +39,8 @@ const Password = ({placeholder})=>(<View style={styles.password}>
   </View> 
   );
 
-const Btn=({title})=>(<TouchableOpacity style={styles.btnContainer}>
-  <Text style={{color:'#fff',fontSize:18, fontWeight:'bold'}}>{title}</Text></TouchableOpacity>
+const Btn=({title, setcount})=>(<TouchableOpacity onPress={() => setcount(x => x + 1)} style={styles.btnContainer}>
+  <Text  style={{color:'#fff',fontSize:18, fontWeight:'bold'}}>{title}</Text></TouchableOpacity>
  );
 
 const CreateAccount=({})=>(<View style={{ justifyContent:'center', alignItems:'center',flexDirection:'row', paddingTop:30,}}>
@@ -49,6 +49,10 @@ const CreateAccount=({})=>(<View style={{ justifyContent:'center', alignItems:'c
 </View>)
 
 export default function App() {
+
+  const [count, setCount]= useState(0);
+  console.log('count------------->',count);
+
   return (
     <>
       <View style={styles.container}>
@@ -61,7 +65,7 @@ export default function App() {
           <Password placeholder={'Password'}/>         
         </View>
         <View style={{flex:1, justifyContent:'center'}}>
-        <Btn title={'Sign in'}/>
+        <Btn setcount={setCount} title={'Sign in'}/>
         <CreateAccount />
         </View>
         
@@ -136,48 +140,3 @@ const styles = StyleSheet.create({
 
 });
 
-
-{/* <View style={styles.container}>
-
-
-<View style={{
-  borderBottomColor: 'black',
-  borderBottomWidth: 1,
-}}>
-  <TextInput
-    style={{
-      height: 40,
-      width: 330,
-    }}
-    placeholder="Email"
-    defaultValue={''}
-  />
-</View>
-<View style={{
-  borderBottomColor: 'black',
-  borderBottomWidth: 1,
-  justifyContent: 'center',
-  flexDirection: 'row',
-  alignItems: 'center'
-
-}}>
-  <TextInput
-    style={{
-      height: 40,
-      width: 220,
-    }}
-    placeholder="Password"
-    defaultValue={''}
-  />
-  <Text style={{ color: 'blue' }}>Forgot password?</Text>
-</View>
-
-<StatusBar style="auto" />
-</View>
-<View style={styles.container2}>
-
-<Button style={styles.button}
-  title="Sign in"
-/>
-
-</View> */}
