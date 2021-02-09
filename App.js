@@ -1,52 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState}from 'react';
 import { StyleSheet, Text, View, TextInput, Button, Image,TouchableOpacity } from 'react-native';
+import Login from './pages/Login.js';
+import Signup from './pages/Signup.js';
+import ForgotPassword from './pages/ForgotPassword.js';
 
-const Logo = ({ url }) => (<View style={styles.logo}>
-
-  <Image style={{
-    width: 50,
-    height: 50,
-
-  }}
-    source={{
-      uri: url,
-    }} />
-</View>)
-
-const Title = ({title}) => (<Text style={ styles.title}>{title}</Text>);
-
-const SubTitle =({value})=>(<Text style={styles.subtitle}>{value}</Text>
-  );
-
-const Email = ({placeholder})=>(
-<TextInput
-  style={styles.input}
-  placeholder={placeholder}
-  defaultValue={''}
- 
-/>
-);
-
-const Password = ({placeholder})=>(<View style={styles.password}>
-  <TextInput
-    style={styles.input2}
-    placeholder={placeholder}
-    defaultValue={''}
-    
-  />
-   <Text style={{color:'#1E90FF', fontWeight:'bold', fontSize:12}}>Forgot password?</Text>
-  </View> 
-  );
-
-const Btn=({title, setcount})=>(<TouchableOpacity onPress={() => setcount(x => x + 1)} style={styles.btnContainer}>
-  <Text  style={{color:'#fff',fontSize:18, fontWeight:'bold'}}>{title}</Text></TouchableOpacity>
- );
-
-const CreateAccount=({})=>(<View style={{ justifyContent:'center', alignItems:'center',flexDirection:'row', paddingTop:30,}}>
-  <Text style={{color:'#8899A6', fontSize:16}}>Don't have an account?</Text>
-  <Text style={{color:'#1E90FF', fontWeight:'bold', fontSize:16}}> Create account</Text>
-</View>)
 
 export default function App() {
 
@@ -55,27 +13,15 @@ export default function App() {
 
   return (
     <>
-      <View style={styles.container}>
-        <Logo url={'https://i.pinimg.com/originals/bf/ea/1e/bfea1efaa3b7126e8c2195fa380c9523.jpg'} />
-        <Title title={"Login"} />
-        <SubTitle value={'Welcome back,'} />
-        <SubTitle value={'Signin to cotinue etiam tecimates sed ad'} />
-        <View style={styles.inputview}>
-          <Email placeholder={'Email'}/>
-          <Password placeholder={'Password'}/>         
-        </View>
-        <View style={{flex:1, justifyContent:'center'}}>
-        <Btn setcount={setCount} title={'Sign in'}/>
-        <CreateAccount />
-        </View>
-        
-      </View>
+      {/* <Login/> */}
+      <Signup/>
+      {/* <ForgotPassword/> */}
 
     </>
   );
 }
 
-const styles = StyleSheet.create({
+/*const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '',
@@ -139,4 +85,4 @@ const styles = StyleSheet.create({
   }
 
 });
-
+*/
