@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState}from 'react';
-import { StyleSheet, Text, View, TextInput, Image,TouchableOpacity, } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Image,TouchableOpacity, Dimensions} from 'react-native';
 // import Checkbox from 'expo-checkbox';
 // import CheckBox from '@react-native-community/checkbox';
 import { Button, CheckBox } from 'react-native-elements';
@@ -12,8 +12,10 @@ import Input from '../components/Input.js';
 import Password from '../components/Password2.js';
 import Btn from '../components/Btn.js';
 import Footer from '../components/Footer.js';
+import { verticalScale } from '../Utils/index.js';
 
 
+const { height, width} = Dimensions.get('window');
 
 export default function Login() {
 
@@ -27,8 +29,7 @@ export default function Login() {
         <View style={styles.container}>
           <Logo url={'https://i.pinimg.com/originals/bf/ea/1e/bfea1efaa3b7126e8c2195fa380c9523.jpg'} />
           <Title title={"Create account"} />
-          <Subtitle value={'Nec nihil affert partiendo ne, quo no iisque'} />
-          <Subtitle value={'etiam tacimates sed conceptam.'} />
+          <Subtitle value={'Nec nihil affert partiendo ne, quo no iisque \n etiam tacimates sed conceptam.'} />
           <View style={styles.inputContainer}>
             <Input placeholder={'Name'}/>
             <Input placeholder={'Email'}/>
@@ -56,28 +57,32 @@ export default function Login() {
 
   const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      backgroundColor: '',
-      alignItems: 'center',
-  
+      flex:1,
+      justifyContent:'center',
+      alignItems:'center',
+      height,
+      width,
     },
 
     inputContainer:{
-      marginTop:40,
-      flexDirection:'column'
+      // marginTop: verticalScale(59),
+      marginTop: verticalScale(30),
+      display:'flex',
+      justifyContent:'center',
+      alignItems:'center'
     },
     checkboxContainer: {
         flexDirection: "row",
-        marginTop: 20,
-        width:320,
+        // marginTop: verticalScale(20),
+        marginTop: verticalScale(5),
         alignItems:'center'
       },
     checkbox: {
-        color: "red",
+        // color: "red",
         
     },
     label: {
-        margin: 8,
+        margin: verticalScale(8),
         color:'#8899A6'
     },
     btnContainer:{

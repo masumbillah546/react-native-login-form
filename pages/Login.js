@@ -27,7 +27,7 @@ export default function Login() {
             <Input placeholder={'Email'}/>
             <Password placeholder={'Password'}/>         
           </View>
-          <View style={{flex:1, justifyContent:'center'}}>
+          <View style={styles.btnContainer}>
             <Btn setcount={setCount} title={'Sign in'}/>
             <Footer text1={'Don\'t have an account?'} text2={' Create account'}/>
           </View>
@@ -54,6 +54,11 @@ export default function Login() {
       alignItems:'center'
       
     },
+    btnContainer:{
+      flex:1,
+      justifyContent:'center',
+      alignItems:'center',
+  },
    
 });
   

@@ -14,18 +14,19 @@ const styles = StyleSheet.create({
   footerContainer:{
     marginTop:verticalScale(32),
     marginBottom:verticalScale(200),
-    // marginBottom:100,
     justifyContent:'center',
     alignItems:'center',
     flexDirection:'row',
   },
   text1:{
     color:'#8E8E93',
-    fontSize:16
+    fontSize:16,
+    textAlign:'center'
   },
   text2:{
     color:'#1E90FF',
     fontWeight:'600',
-    fontSize:15
+    fontSize:15,
+    // textAlign:'center'
   }
 });
