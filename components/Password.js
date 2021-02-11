@@ -1,9 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState}from 'react';
-import { StyleSheet, Text, View, TextInput, Button, Image,TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, Image,TouchableOpacity ,Dimensions} from 'react-native';
+import { verticalScale } from '../Utils';
 
+const { height, width} = Dimensions.get('window');
 
-const Password = ({placeholder})=>(<View style={styles.password}>
+const Password = ({placeholder})=>(<View style={styles.passwordContainer}>
   <TextInput
     style={styles.input}
     placeholder={placeholder}
@@ -16,29 +18,28 @@ const Password = ({placeholder})=>(<View style={styles.password}>
 export default Password;
 const styles = StyleSheet.create({
   
-  input:{
-    height: 45,
-    width: 213,
-    placeholderTextColor:'#8899A6',
-    fontSize:15,
-    padding:0,
-    margin:0
-    
-  },
-  password:{
+  
+  passwordContainer:{
     display:'flex',
     flexDirection:'row',
+    justifyContent:'space-between',
     alignItems:'center',
-    justifyContent:'center',
-    width:320,
-    height:45,
+    width:width-40,
     borderBottomColor:'#DEDEDE',
     borderBottomWidth:1,
   },
+  input:{
+    height: verticalScale(60),
+    minWidth:30,
+    placeholderTextColor:'rgba(60, 60, 67, 0.3)',
+    fontSize:17,
+    
+  },
   forgotPass:{
     color:'#1E90FF',
+    textAlign:'right',
     fontWeight:'bold',
-    fontSize:12,
+    fontSize:13,
   }
 
 });

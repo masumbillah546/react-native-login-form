@@ -1,7 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState}from 'react';
-import { StyleSheet, Text, View, TextInput, Button, Image,TouchableOpacity, } from 'react-native';
-import Checkbox from 'expo-checkbox';
+import { StyleSheet, Text, View, TextInput, Image,TouchableOpacity, } from 'react-native';
+// import Checkbox from 'expo-checkbox';
+// import CheckBox from '@react-native-community/checkbox';
+import { Button, CheckBox } from 'react-native-elements';
+
 import Logo from '../components/Logo.js';
 import Title from '../components/Title.js';
 import Subtitle from '../components/Subtitle.js';
@@ -15,8 +18,8 @@ import Footer from '../components/Footer.js';
 export default function Login() {
 
     const [count, setCount]= useState(0);
-    console.log('count------------->',count);
-    // const [toggleCheckBox, setToggleCheckBox] = useState(false);
+    const [toggleCheckBox, setToggleCheckBox] = useState(false);
+    console.log('count------------->',toggleCheckBox);
 
   
     return (
@@ -24,18 +27,19 @@ export default function Login() {
         <View style={styles.container}>
           <Logo url={'https://i.pinimg.com/originals/bf/ea/1e/bfea1efaa3b7126e8c2195fa380c9523.jpg'} />
           <Title title={"Create account"} />
-          <Subtitle value={'Welcome back,'} />
-          <Subtitle value={'Signin to cotinue etiam tecimates sed ad'} />
+          <Subtitle value={'Nec nihil affert partiendo ne, quo no iisque'} />
+          <Subtitle value={'etiam tacimates sed conceptam.'} />
           <View style={styles.inputContainer}>
             <Input placeholder={'Name'}/>
             <Input placeholder={'Email'}/>
-            <Password placeholder={'Password'}/>         
+            <Password placeholder={'Password'}/> 
           </View>
+          {/* <Button /> */}
           <View style={styles.checkboxContainer}>
-          <Checkbox
-                // disabled={false}
-                // value={toggleCheckBox}
-                // onValueChange={(newValue) => setToggleCheckBox(newValue)}
+          <CheckBox
+                checked={toggleCheckBox}
+                onPress={() => setToggleCheckBox(preValue => !preValue)}
+                color={'dodgerblue'}
             />
             <Text style={styles.label}>I agree with our <Text style={styles.termsConditions}>Terms</Text> and <Text style={styles.termsConditions}>Conditions</Text></Text>
           </View>
