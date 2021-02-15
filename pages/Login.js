@@ -3,6 +3,7 @@ import React, {useState}from 'react';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
 import Logo from '../components/Logo.js';
 import Title from '../components/Title.js';
+// import Title from '../components/common/Title.js';
 import Subtitle from '../components/Subtitle.js';
 import Input from '../components/Input.js';
 import Password from '../components/Password.js';
@@ -21,17 +22,16 @@ export default function Login() {
       <>
         <View style={styles.container}>
           <Logo url={'https://i.pinimg.com/originals/bf/ea/1e/bfea1efaa3b7126e8c2195fa380c9523.jpg'} />
-          <Title title={"Login"} />
+          <Title title={"Login"}/>
           <Subtitle value={'Welcome back,\n Signin to cotinue etiam tecimates sed ad'} />
           <View style={styles.inputContainer}>
             <Input placeholder={'Email'}/>
-            <Password placeholder={'Password'}/>         
+            <Password placeholder={'Password'}/>
           </View>
           <View style={styles.btnContainer}>
             <Btn setcount={setCount} title={'Sign in'}/>
             <Footer text1={'Don\'t have an account?'} text2={' Create account'}/>
-          </View>
-          
+          </View>          
         </View>
   
       </>
@@ -47,11 +47,28 @@ export default function Login() {
       width,
     },
 
+    // titleCotainer:{
+    //   height:verticalScale(41),
+    //   marginTop:verticalScale(35),
+    // },
+    // title:{
+      
+    //   fontSize:'min(10vw, 34px)',
+    //   fontStyle:'normal',
+    //   fontWeight:'bold',
+    //   textAlign:'center',
+    //   letterSpacing:0.374,
+    //   lineHeight:verticalScale(41)
+
+    // },
+
     inputContainer:{
       marginTop: verticalScale(59),
+      maxWidth:400,
       display:'flex',
       justifyContent:'center',
-      alignItems:'center'
+      alignItems:'center',
+     
       
     },
     btnContainer:{

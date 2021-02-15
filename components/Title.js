@@ -6,7 +6,7 @@ import { verticalScale } from '../Utils/index.js';
 const { height, width} = Dimensions.get('window');
 
 const Title = ({title}) => (<View style={ styles.titleCotainer}>
-  <Text style={ width<=280 ? styles.samllTitle : styles.title }>{title}</Text>
+  <Text style={ styles.title}>{title}</Text>
   </View>);
 export default Title;
 const styles = StyleSheet.create({
@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     },
     title:{
       
-      fontSize: verticalScale(34),
+      fontSize: 'min(10vw, 34px)',
       fontStyle:'normal',
       fontWeight: 'bold',
       textAlign:'center',
@@ -25,16 +25,7 @@ const styles = StyleSheet.create({
       lineHeight:verticalScale(41)
 
     },
-    samllTitle:{
-      
-      fontSize: verticalScale(30),
-      fontStyle:'normal',
-      fontWeight: 'bold',
-      textAlign:'center',
-      letterSpacing:0.374,
-      lineHeight:verticalScale(41)
-
-    },
+   
   
   });
   

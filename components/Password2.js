@@ -19,8 +19,8 @@ const styles = StyleSheet.create({
   
   input:{
     height: verticalScale(60),
-    // width: 343,
     width:width-40,
+    maxWidth:400,
     borderBottomWidth:1,
     borderBottomColor:'#DEDEDE',
     placeholderTextColor:'rgba(60, 60, 67, 0.3)',
