@@ -6,25 +6,27 @@ import { verticalScale } from '../Utils/index.js';
 
 const { height, width} = Dimensions.get('window');
 
-const Input = ({placeholder})=>(
+const Input = ({placeholder, ml, nol})=>(
 <TextInput
   style={styles.input}
   placeholder={placeholder}
-  defaultValue={''}   
+  placeholderTextColor='rgba(60, 60, 67, 0.3)'
+  defaultValue={''}
+  multiline={ml}
+  numberOfLines={nol}   
 />
 );
 export default Input;
 const styles = StyleSheet.create({
   input:{
     height: verticalScale(60),
+    padding:verticalScale(5),
     width:width-40,
     maxWidth:400,
-    alignItems: 'center',
     borderBottomWidth:1,
     borderBottomColor:'#DEDEDE',
-    placeholderTextColor:'rgba(60, 60, 67, 0.3)',
     fontSize:17,
-        
+
   },
 
 });

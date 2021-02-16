@@ -9,6 +9,7 @@ const Password = ({placeholder})=>(<View style={styles.passwordContainer}>
   <TextInput
     style={styles.input}
     placeholder={placeholder}
+    placeholderTextColor='rgba(60, 60, 67, 0.3)'
     defaultValue={''}
     
   />
@@ -33,7 +34,6 @@ const styles = StyleSheet.create({
     height: verticalScale(60),
     // minWidth:30,
     width:'50%',
-    placeholderTextColor:'rgba(60, 60, 67, 0.3)',
     fontSize:17,   
   },
   forgotPass:{

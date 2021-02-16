@@ -17,7 +17,8 @@ const styles = StyleSheet.create({
     },
     title:{
       
-      fontSize: 'min(10vw, 34px)',
+      // fontSize: 'min(10vw, 34px)',
+      fontSize:34,
       fontStyle:'normal',
       fontWeight: 'bold',
       textAlign:'center',

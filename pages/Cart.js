@@ -50,7 +50,7 @@ export default function Cart() {
    },
    itemContainer:{
       display:'flex',
-      backgroundColor:'lightblue',
+      // backgroundColor:'lightblue',
       // height:110,
       flexDirection:'row',
       justifyContent:'space-between',

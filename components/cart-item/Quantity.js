@@ -64,14 +64,14 @@ const styles = StyleSheet.create({
     color:'#BBBBBB',
     fontSize:14,
     textAlign:'center',
-    fontWeight:600,
+    fontWeight:'600',
     // width:verticalScale(32),
     width:32
   },
   delete:{
     color:'#BBBBBB',
     textAlign:'center',
-    fontWeight:600,
+    fontWeight:'600',
     fontSize:16,
   },
   quantity:{

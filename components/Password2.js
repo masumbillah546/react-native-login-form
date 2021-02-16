@@ -9,6 +9,7 @@ const Password2 = ({placeholder})=>(
   <TextInput
     style={styles.input}
     placeholder={placeholder}
+    placeholderTextColor='rgba(60, 60, 67, 0.3)'
     defaultValue={''}
     
   />
@@ -23,7 +24,6 @@ const styles = StyleSheet.create({
     maxWidth:400,
     borderBottomWidth:1,
     borderBottomColor:'#DEDEDE',
-    placeholderTextColor:'rgba(60, 60, 67, 0.3)',
     fontSize:17,
     
   },

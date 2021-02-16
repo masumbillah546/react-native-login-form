@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
  
   btnContainer:{
     marginTop:verticalScale(206),
+    alignItems:'center'
 
   },
   btn:{
@@ -28,12 +29,10 @@ const styles = StyleSheet.create({
     backgroundColor:'#007AFF',
   },
   text:{
-    // width:311,
-    height:22,
     color:'#fff',
     fontSize:17,
     textAlign:'center',
-    fontWeight:600
+    fontWeight:'bold'
   }
 
 });

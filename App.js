@@ -5,6 +5,7 @@ import Login from './pages/Login.js';
 import Signup from './pages/Signup.js';
 import ForgotPassword from './pages/ForgotPassword.js';
 import Cart from './pages/Cart.js';
+import CreateCutomer from './pages/CreateCutomer.js';
 
 
 export default function App() {
@@ -15,9 +16,10 @@ export default function App() {
   return (
     <>
       {/* <Login/> */}
-      <Signup/>
+      {/* <Signup/> */}
       {/* <ForgotPassword/> */}
       {/* <Cart/> */}
+      <CreateCutomer/>
     </>
   );
 }

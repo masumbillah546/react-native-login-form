@@ -12,7 +12,6 @@ export default Input;
 //     alignItems: 'center',
 //     borderBottomWidth:1,
 //     borderBottomColor:'#DEDEDE',
-//     placeholderTextColor:'rgba(60, 60, 67, 0.3)',
 //     fontSize:17,
         
 //   },

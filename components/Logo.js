@@ -12,9 +12,9 @@ const Logo = ({ url }) => (<View style={styles.logoContainer}>
       // height:44
   
     }}
-      source={
-       url
-      } />
+      source={{
+       uri:url
+      }} />
   </View>)
   
 export default Logo;
