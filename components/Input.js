@@ -6,10 +6,11 @@ import { verticalScale } from '../Utils/index.js';
 
 const { height, width} = Dimensions.get('window');
 
-const Input = ({placeholder, ml, nol})=>(
+const Input = ({placeholder, ml, nol, onChange})=>(
 <TextInput
   style={styles.input}
   placeholder={placeholder}
+  onChangeText={onChange}
   placeholderTextColor='rgba(60, 60, 67, 0.3)'
   defaultValue={''}
   multiline={ml}

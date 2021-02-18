@@ -5,8 +5,8 @@ import { verticalScale } from '../Utils/index.js';
 
 const { height, width} = Dimensions.get('window');
 
-const Btn=({title, setcount})=>(<View style={styles.btnContainer}><TouchableOpacity onPress={() => setcount(x => x + 1)} style={styles.btn}>
-  <Text  style={styles.text}>{title}</Text></TouchableOpacity></View>
+const Btn=({title, onSubmit})=>(<TouchableOpacity onPress={() => onSubmit()}  style={styles.btnContainer}><View style={styles.btn}>
+  <Text  style={styles.text}>{title}</Text></View></TouchableOpacity>
  );
 export default Btn;
 const styles = StyleSheet.create({
